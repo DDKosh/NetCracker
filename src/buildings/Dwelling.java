@@ -114,9 +114,14 @@ public class Dwelling {
 
     public Flat[] sortedFlats(){
         Flat[] flats = new Flat[getFlatsQuantity()];
+        Flat swapFlat;
         for (int i = flats.length - 1; i > 0; i--)
             for (int j = 0; j < i; j++){
-                if(fl)
+                if(flats[j].getArea() < flats[j+1].getArea()){
+                    swapFlat = flats[j];
+                    flats[j] = flats[j+1];
+                    flats[j+1] = swapFlat;
+                }
             }
         return flats;
     }
