@@ -1,17 +1,13 @@
 package buildings;
 
-public class Node<E> {
-    Node<E> next;
-    Node<E> previous;
-    E value;
-    Boolean head;
+public class Node<Office> {
+    Node next;
+    Office value;
 
     Node(){}
 
-    Node(Node<E> next, Node<E> previous, E e, Boolean head){
+    Node(Node<Office> next, Office e){
         this.next = next;
-        this.previous = previous;
         this. value = e;
-        this.head = head;
     }
 }
